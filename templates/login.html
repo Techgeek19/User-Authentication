@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="center-align" > 
+    Login </h1>
+    
+<!-- message -->
+
+<div class="container">
+{% if messages %}
+    <ul>    
+{% for message in messages %}
+   <li> {{ message }} </li>
+   {% endfor %} 
+        </ul>
+   {% endif %} 
+</div>
+
+<!-- form -->
+<div class="container">
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+    <button class="waves-effect waves-light btn" type="submit"> Login </button>
+</form>
+</div>    
+    
+{% endblock%}

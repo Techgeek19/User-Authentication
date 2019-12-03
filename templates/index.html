@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav>
+        <div class="nav-wrapper">
+                  <a href='' class="brand-logo">Home </a>
+                  <ul id='nav-mobile' class="right hide-on-med-and-down">
+                    <li><a href='/register/'> Register</a></li>
+                    <li><a href='login' >Already register? Login </a></li>
+                  </ul>
+                </div>
+              </nav>
+                        
+
+
+<div class="parallax-container">
+        <div class="parallax"><img src="https://cdn.datafloq.com/cache/blog_pictures/878x531/machine-learning-solving-user-authentication-apps.jpg">
+        </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems);
+  });
+</script>
+
+
+                  
+{% endblock%}

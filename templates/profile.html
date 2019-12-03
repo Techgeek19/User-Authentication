@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+<h1 class="center-align"> 
+    Profile </h1>
+    
+
+    {% for User in obj %}
+<table class="container">
+        <thead>
+          <tr>
+              <th>Userame</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+        
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>  {{ User.username }} </td>
+            <td> {{ User.first_name }} </td>
+            <td> {{ User.last_name }} </td>
+            <td>  {{ User.email }} </td>
+        
+          </tr>
+        </tbody>
+</table>
+    
+  
+{% endfor %}     
+    
+{% endblock%}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="center-align"> 
+    Register here !
+</h1>
+
+<div class="container">
+{% if messages %}
+    <ul class="messages">    
+{% for message in messages %}
+   <li class="alert alert-danger"> {{ message }} </li>
+   {% endfor %} 
+        </ul>
+   {% endif %} 
+</div>
+
+<div class="container">
+<form action="" method="POST">
+    {% csrf_token %}
+
+
+    {{ form.as_p }}
+
+    <!-- {{ form.username.errors }}
+    {{ form.email.errors }}
+    {{ form.confirm_password.errors }} -->
+
+    <button class="waves-effect waves-light btn" type="submit"> Submit </button>
+</form>
+
+</div>
+    
+{% endblock%}
